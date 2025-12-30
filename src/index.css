@@ -1,0 +1,148 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+.pane{
+  height: 50vh;
+  display: flex;
+  overflow: hidden;
+}
+.top-pane{
+  background-color: hsl(255,6%,13%);
+}
+
+.editor-title{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .5rem .5rem 1rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+.editor-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; 
+  padding: 0.5rem;
+  
+}
+.code-mirror-wrapper,
+.cm-editor,
+.cm-scroller {
+  height: 100%;
+}
+
+.code-mirror-wrapper .cm-editor{
+  overflow: hidden;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.editor-container.collapsed{
+flex-grow: 0;
+}
+.cm-scroller {
+  height: 100%;
+  
+}
+.editor-container {
+  position: relative; 
+}
+
+
+.editor-container.collapsed .cm-scroller{
+  position: absolute;
+  inset: 0;
+}
+
+.expend-collapse-button {
+  margin-left: .5rem;
+  background: none;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 768px){
+  .top-pane {
+    flex-direction: column;
+    height: auto;
+  }
+  .pane{
+    height: 50vh;
+  }
+}
+/* * {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+.pane{
+  height: 50vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.top-pane{
+  background-color: hsl(255,6%,13%);
+}
+
+.editor-title{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .5rem .5rem 1rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.editor-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0 .5rem;
+}
+
+.code-mirror-wrapper,
+.cm-editor,
+.cm-scroller {
+  height: 100%;
+}
+
+.code-mirror-wrapper .cm-editor{
+  overflow: hidden;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.cm-scroller {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.editor-container.collapsed{
+  flex-grow: 0;
+}
+
+.editor-container.collapsed .cm-scroller{
+  position: absolute;
+  inset: 0;
+}
+
+.expend-collapse-button {
+  margin-left: .5rem;
+  background: none;
+  color: white;
+  border: none;
+}
+ */
