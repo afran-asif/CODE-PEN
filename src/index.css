@@ -67,15 +67,32 @@ flex-grow: 0;
   border: none;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+
   .top-pane {
     flex-direction: column;
-    height: auto;
-  }
-  .pane{
     height: 50vh;
+    gap: 0.01rem;
+    overflow-y: auto; /* 🔥 VERY IMPORTANT */
+  }
+
+  .editor-container {
+    flex: 1;
+    min-height: 6rem; /* ✅ ensures visibility */
+  }
+
+  .editor-container.collapsed {
+    flex: 0 0 auto;   /* ✅ don't shrink to zero */
+    height: 3rem;
+    min-height: 3rem;
+  }
+
+  .editor-container.collapsed .code-mirror-wrapper {
+    display: none;
   }
 }
+
+
 /* * {
   box-sizing: border-box;
 }
