@@ -3,9 +3,9 @@ import Editor from "./Editor";
 import useLocalStorage from './useLocalStorage';
 function App() {
 
-  const [html, setHtml] = useLocalStorage("html","");
-  const [css, setCss] =useLocalStorage("css","");
-  const [js, setJs] = useLocalStorage("js","");
+  const [html, setHtml] = useLocalStorage('html','');
+  const [css, setCss] =useLocalStorage('css','');
+  const [js, setJs] = useLocalStorage('js','');
   const [srcDoc, setSrcDoc] = useState("");
 
   useEffect (() => {

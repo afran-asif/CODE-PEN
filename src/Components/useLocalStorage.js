@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 const PREFIX = 'codepen-'
 
 export default function useLocalStorage( key , initialValue ) {
-    const prefixedkey = PREFIX + key
+    const prefixedKey = PREFIX + key
 
     const[ value, setValue ] = useState(() => {
-        const jsonValue = localStorage.getItem(prefixedkey)
+        const jsonValue = localStorage.getItem(prefixedKey)
         if (jsonValue != null) return JSON.parse( jsonValue )
 
         if (typeof initialValue === 'function') {
             return initialValue()
         } else {
-            initialValue
+            return initialValue
         }
     })
     useEffect (() => {
-        localStorage.setItem(prefixedkey, JSON.stringify(value))
-    }, [prefixedkey, value])
+        localStorage.setItem(prefixedKey, JSON.stringify(value))
+    }, [prefixedKey, value])
 
-    return [value , setValue ]
+    return [value, setValue]
 }
