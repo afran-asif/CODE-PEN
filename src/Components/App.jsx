@@ -5,7 +5,7 @@ function App() {
 
   const [html, setHtml] = useLocalStorage('html','');
   const [css, setCss] =useLocalStorage('css','');
-  const [js, setJs] = useLocalStorage('js','');
+  const [javascript, setJavascript] = useLocalStorage('javascript','');
   const [srcDoc, setSrcDoc] = useState("");
 
   useEffect (() => {
@@ -14,12 +14,12 @@ function App() {
     <html>
       <body>${html}</body>
       <style>${css}</style>
-      <script>${js}</script>
+      <script>${javascript}</script>
     </html>
   `)
     }, 250 );
     return () => clearTimeout(timeout)
-  },[html,css,js])
+  },[html,css,javascript])
   return (
     <>
         <div className='pane top-pane'>
@@ -38,8 +38,8 @@ function App() {
           <Editor 
             displayName="JS"
             language="javascript"
-            value={js}
-            onChange={setJs}
+            value={javascript}
+            onChange={setJavascript}
           />
         </div>
         <div className='pane bg'>
