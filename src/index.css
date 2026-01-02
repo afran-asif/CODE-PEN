@@ -73,13 +73,12 @@ flex-grow: 0;
     flex-direction: column;
     height: 50vh;
     gap: 0.01rem;
-    overflow-y: auto; /* 🔥 VERY IMPORTANT */
   }
 
-  .editor-container {
+  /* .editor-container {
     flex: 1;
-    min-height: 6rem; /* ✅ ensures visibility */
-  }
+    min-height: 6rem;
+  } */
 
   .editor-container.collapsed {
     flex: 0 0 auto;   /* ✅ don't shrink to zero */
@@ -87,9 +86,9 @@ flex-grow: 0;
     min-height: 3rem;
   }
 
-  .editor-container.collapsed .code-mirror-wrapper {
+  /* .editor-container.collapsed .code-mirror-wrapper {
     display: none;
-  }
+  } */
 }
 
 
